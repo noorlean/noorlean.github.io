@@ -866,7 +866,7 @@ class TbPlayer{
 				// fetch("http://localhost/php/?id=Dorf8i6lCuk&type=youtube")
 				// fetch("http://localhost/php/?id=YA0KB2DPJms&type=youtube")
 				try {
-					fetch("http://localhost/php/?id="+urlInfo.id+"&type="+urlInfo.type)
+					fetch("http://masmas.rf.gd?id="+urlInfo.id+"&type="+urlInfo.type)
 					.then(res => {
 						if (res.ok) return res.text();
 						return res.text().then(res => {throw new Error(res.error)})
