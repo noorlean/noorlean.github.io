@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="assets/css/mian.css">
+</head>
+<body>
+	<div id="global-style"></div>
+	<div class="overlay"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>
+	<div class="wrapper" id="tb-local-media">
+		<div class="container">
+			<!-- <div class="site-header">
+				<button id="add-playlist-btn">Add</button>
+			</div> -->
+			<div class="site-tabs">
+				<div class="site-tabs-body">
+					<div class="site-tabs-item  site-tabs-item-active" id="app-tab-home">
+						<div class="site-add-media-form">
+							<input type="text" id="site-media-url-input" value="">
+							<button id="site-media-get-btn">Get</button>
+							<input type="range" name="" id="">
+						</div>
+					</div>
+					<div class="site-tabs-item" id="app-tab-recent">
+						<div class="site-tabs-header">
+							<div class="site-tabs-title">History</div>
+							<div class="site-tabs-tools"></div>
+						</div>
+						<div class="site-tab-body">
+							<div class="site-list-items"></div>
+						</div>
+					</div>
+					<div class="site-tabs-item" id="app-tab-playlists">
+						<div class="site-tabs-header">
+							<div class="site-tabs-title">Playlists</div>
+							<div class="site-tabs-tools"></div>
+						</div>
+						<div class="site-tab-body">
+							<div class="site-list-items"></div>
+						</div>
+					</div>
+					<div class="site-tabs-item" id="app-tab-settings"></div>
+				</div>
+				<div class="site-tabs-btns">
+					<div class="site-tabs-item-btn"><span>Tab 1</span></div><!-- Home -->
+					<div class="site-tabs-item-btn"><span>Tab 2</span></div><!-- Playlist -->
+					<div class="site-tabs-item-btn"><span>Tab 3</span></div><!-- Recent -->
+					<div class="site-tabs-item-btn"><span>Tab 3</span></div><!-- Settings -->
+				</div>
+			</div>
+		</div>
+		<div class="site-player">
+		<!-- <div class="site-player site-player-show"> -->
+			<div class="site-player-video site-player-controls-hide">
+				<video src="" autoplay></video>
+				<div class="site-player-controls">
+					<div class="site-player-top">
+						<div class="site-player-btn site-player-collapse-btn">
+							<svg viewBox="0 -960 960 960"><path d="M480-358.463 253.847-584.615 296-626.768l184 184 184-184 42.153 42.153L480-358.463Z"/></svg>						
+						</div>
+						<div class="site-player-btn site-player-media-setting-btn">
+							<svg viewBox="0 0 24 24"><path d="M10.4,18.4l-0.3-2c-0.2-0.1-0.4-0.1-0.6-0.3c-0.2-0.1-0.4-0.2-0.5-0.3l-1.9,0.8l-1.6-2.7l1.6-1.2c0-0.1,0-0.2,0-0.3c0-0.1,0-0.2,0-0.3c0-0.1,0-0.2,0-0.3c0-0.1,0-0.2,0-0.3l-1.6-1.2l1.6-2.7l1.9,0.8C9.3,8.1,9.5,8,9.6,7.9c0.2-0.1,0.4-0.2,0.5-0.3l0.3-2h3.1l0.3,2.1c0.2,0.1,0.4,0.2,0.5,0.3c0.2,0.1,0.3,0.2,0.5,0.3l1.9-0.8l1.6,2.7l-1.7,1.3c0,0.1,0,0.2,0,0.3c0,0.1,0,0.2,0,0.3c0,0.1,0,0.2,0,0.3c0,0.1,0,0.2,0,0.3l1.7,1.2l-1.6,2.7l-1.9-0.8c-0.2,0.1-0.3,0.3-0.5,0.4c-0.2,0.1-0.4,0.2-0.5,0.3l-0.3,2.1C13.6,18.4,10.4,18.4,10.4,18.4z M11.3,17.4h1.3l0.2-1.8c0.3-0.1,0.7-0.2,0.9-0.4c0.3-0.2,0.6-0.4,0.8-0.6l1.7,0.7l0.7-1.1L15.5,13c0.1-0.2,0.1-0.3,0.1-0.5c0-0.2,0-0.3,0-0.5c0-0.2,0-0.3,0-0.5c0-0.2-0.1-0.3-0.1-0.5L17,9.9l-0.7-1.1l-1.7,0.7c-0.2-0.2-0.5-0.5-0.8-0.6c-0.3-0.2-0.6-0.3-1-0.4l-0.2-1.8h-1.3l-0.2,1.8c-0.3,0.1-0.7,0.2-0.9,0.4C9.9,9,9.6,9.2,9.3,9.4L7.7,8.7L7,9.9L8.5,11c-0.1,0.2-0.1,0.3-0.1,0.5c0,0.2,0,0.4,0,0.5c0,0.2,0,0.3,0,0.5c0,0.2,0.1,0.3,0.1,0.5L7,14.1l0.7,1.1l1.7-0.7c0.3,0.3,0.5,0.5,0.8,0.6c0.3,0.2,0.6,0.3,1,0.4L11.3,17.4z M12,14c0.6,0,1-0.2,1.4-0.6C13.8,13,14,12.6,14,12s-0.2-1-0.6-1.4C13,10.2,12.6,10,12,10c-0.6,0-1,0.2-1.4,0.6C10.2,11,10,11.4,10,12s0.2,1,0.6,1.4C11,13.8,11.4,14,12,14z"/></svg>						
+						</div>
+					</div>
+
+					<div class="site-player-media-title-s">Lorem, ipsum dolor.</div>
+					<div class="site-player-middle">
+						<!-- <div class="site-player-btn site-player-controls-prev">
+							<svg height="24" viewBox="0 0 24 24" width="24"><path d="M19,6L9,12l10,6V6L19,6z M7,6H5v12h2V6z"></path></svg>
+						</div> -->
+						<div class="site-player-play-pause">
+							<svg class="site-player-play" viewBox="0 0 24 24"><path d="M6,4l12,8L6,20V4z"></path></svg>
+							<svg  class="site-player-pause site-player-hide" viewBox="0 0 24 24"><path d="M9,19H7V5H9ZM17,5H15V19h2Z"></path></svg>
+						</div>
+						<!-- <div class="site-player-btn site-player-controls-next">
+							<svg  height="24" viewBox="0 0 24 24" width="24"><path d="M5,18l10-6L5,6V18L5,18z M19,6h-2v12h2V6z"></path></svg>
+						</div> -->
+						<div class="site-player-btn site-player-close-btn">
+							<svg viewBox="0 -960 960 960"><path d="M256-213.847 213.847-256l224-224-224-224L256-746.153l224 224 224-224L746.153-704l-224 224 224 224L704-213.847l-224-224-224 224Z"/></svg>
+						</div>
+					</div>
+					<div class="site-player-bottom">
+						<div class="site-player-progressbar"><input type="range" min="0" value="0"></div>
+						<div class="site-player-tf">
+							<div class="site-player-time">
+							   <span class="site-player-elapsed-time">00:00</span>  / <span class="site-player-duration">00:00</span>
+							</div>
+							<div class="site-player-b-tools">
+								<div class="site-player-btn site-player-fullscreen">
+									<svg viewBox="0 0 24 24"><path d="M7,11H6V6h5v1H7V11z M18,6h-5v1h4v4h1V6z M18,13h-1v4h-4v1h5V13z M11,17H7v-4H6v5h5V17z"></path></svg>
+								</div>
+							 </div>
+						</div>
+					</div>
+				</div>
+				<span class="site-video-loader"></span>
+			</div>
+			<div class="site-player-details">
+				<div class="site-player-media-info">
+					<div class="site-player-media-title">Lorem, ipsum dolor.</div>
+					<div class="site-player-media-info-btns">
+						
+					</div>
+				</div>
+				<div class="site-player-list-items"></div>
+			</div>
+		</div>
+	</div>
+	<script src="assets/js/tbTabs.js"></script>
+	<script src="assets/js/tbModal.js"></script>
+	<script src="assets/js/html.js"></script>
+	<script src="assets/js/db.js"></script>
+	<script src="assets/js/tbDb.js"></script>
+	<script src="assets/js/tbPlayer.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script>
+
+	
+		// try {
+		// 	fetch("https://rr2---sn-15po-3fp6.googlevideo.com/videoplayback?expire=1700500971&ei=i0FbZfPfEJzHi9oPsIigyAY&ip=31.214.23.10&id=o-AE6RgNb2wLQ3vp0Bwq17RAozmV14aXpaZg-Ot8jRlQw9&itag=299&aitags=133,134,135,136,160,242,243,244,247,278,298,299,302,303&source=youtube&requiressl=yes&mh=iT&mm=31,29&mn=sn-15po-3fp6,sn-hju7enll&ms=au,rdu&mv=m&mvi=2&pcm2cms=yes&pl=20&initcwndbps=1023750&spc=UWF9fyaZt4YypQ4aWzwBpN4VCMtK3CT7LBFrnx9inw&vprv=1&svpuc=1&mime=video/mp4&ns=mFGEeomNxGClVsMUBXUyTDIP&gir=yes&clen=155104650&dur=2495.633&lmt=1697227859514706&mt=1700479045&fvip=5&keepalive=yes&fexp=24007246&beids=24350018&c=WEB&txp=4432434&n=Rr7i72Ds9dCr_fHBJ&sparams=expire,ei,ip,id,aitags,source,requiressl,spc,vprv,svpuc,mime,ns,gir,clen,dur,lmt&sig=ANLwegAwRQIgbIwRQYNdQQFHmjT9cjP60R1IEv8QzVLN4F_H5Uu_IbMCIQCKYYRZIJZ9VVmIiIZyjq5ogpTN5boIPMeG4ryMnGrH9A==&lsparams=mh,mm,mn,ms,mv,mvi,pcm2cms,pl,initcwndbps&lsig=AM8Gb2swRgIhAL4WPhPjG4XcdKMKgfQjMn0ywzlBZ252nv8pheRF_oKFAiEA-SQHRnDYEWlFxg8eiXQ9L6B38_XNHoqp5ZR_9TshpwQ=",{  mode: 'no-cors'}).then
+		// 	(res => {
+		// 		// if (!res.ok) {
+		// 		// 	throw new Error(`Error! status: ${res.status}`);
+		// 		// }
+		// 		console.log(res);
+		// 	})
+			
+		// } catch (err) {
+		// 	console.log(err);
+		// }
+
+			let url = "https://rr2---sn-15po-3fp6.googlevideo.com/videoplayback?expire=1700500971&ei=i0FbZfPfEJzHi9oPsIigyAY&ip=31.214.23.10&id=o-AE6RgNb2wLQ3vp0Bwq17RAozmV14aXpaZg-Ot8jRlQw9&itag=299&aitags=133,134,135,136,160,242,243,244,247,278,298,299,302,303&source=youtube&requiressl=yes&mh=iT&mm=31,29&mn=sn-15po-3fp6,sn-hju7enll&ms=au,rdu&mv=m&mvi=2&pcm2cms=yes&pl=20&initcwndbps=1023750&spc=UWF9fyaZt4YypQ4aWzwBpN4VCMtK3CT7LBFrnx9inw&vprv=1&svpuc=1&mime=video/mp4&ns=mFGEeomNxGClVsMUBXUyTDIP&gir=yes&clen=155104650&dur=2495.633&lmt=1697227859514706&mt=1700479045&fvip=5&keepalive=yes&fexp=24007246&beids=24350018&c=WEB&txp=4432434&n=Rr7i72Ds9dCr_fHBJ&sparams=expire,ei,ip,id,aitags,source,requiressl,spc,vprv,svpuc,mime,ns,gir,clen,dur,lmt&sig=ANLwegAwRQIgbIwRQYNdQQFHmjT9cjP60R1IEv8QzVLN4F_H5Uu_IbMCIQCKYYRZIJZ9VVmIiIZyjq5ogpTN5boIPMeG4ryMnGrH9A==&lsparams=mh,mm,mn,ms,mv,mvi,pcm2cms,pl,initcwndbps&lsig=AM8Gb2swRgIhAL4WPhPjG4XcdKMKgfQjMn0ywzlBZ252nv8pheRF_oKFAiEA-SQHRnDYEWlFxg8eiXQ9L6B38_XNHoqp5ZR_9TshpwQ=";
+			// let url = "https://randomuser.me/api/";
+
+
+			
+			function isValidUrl(url) {
+				return new Promise((resolve) => {
+					try {
+						const newUrl = new URL(url);
+						// return newUrl.protocol === 'http:' || newUrl.protocol === 'https:';
+						if(newUrl.protocol === 'http:' || newUrl.protocol === 'https:'){
+							fetch(url).then
+							(res => {
+								// if (!res.ok) {
+								// 	// throw new Error(`Error! status: ${res.status}`);
+								// }
+								// console.log(res.ok);
+								// return res.ok
+								console.log(res.ok)
+								resolve(res.ok)
+							})
+						}else{
+							// return false;
+							console.log(2222)
+							resolve(false)
+						}
+					} catch (err) {
+						console.log(3333)
+						// return false;
+						resolve(false)
+					}
+
+				})
+			}
+
+
+
+			// isValidUrl(url).then(res => console.log(res))
+
+			function canPlay(url) {
+				return new Promise((resolve) => {
+					let xhr = new XMLHttpRequest();
+					xhr.open("GET", url, true);
+					xhr.onreadystatechange = function () {
+						resolve(xhr.status)
+					}
+					xhr.send();
+				})
+			}
+			// canPlay(url).then(res => console.log(res))
+			// try {
+				
+			// 	fetch(url,{mode: "no-cors"}).then
+			// 	(res => {
+			// 		// if (!res.ok) {
+			// 		// 	// throw new Error(`Error! status: ${res.status}`);
+			// 		// }
+			// 		// console.log(res.ok);
+			// 		// return res.ok
+			// 		console.log(res)
+			// 		// resolve(res.ok)
+			// 	})
+			// } catch (error) {
+			// 	console.log(error)
+			// }
+
+			// console.log("ppoazsd df asfd")
+
+			
+		
+
+		
+		
+	</script>
+</body>
+</html>
