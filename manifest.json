@@ -1,6 +1,6 @@
 {
-    "name": "PWA Share Target",
-    "short_name": "PWA Share Target",
+    "name": "Tb Player",
+    "short_name": "Tb Player",
     "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#FFE9D2",
